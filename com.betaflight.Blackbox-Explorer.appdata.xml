@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+	<id>com.betaflight.Blackbox-Explorer.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>GPL-3.0</project_license>
+	<name>Betaflight Blackbox Explorer</name>
+	<summary>Crossplatform Blackbox inspection tool for the Betaflight flight control system</summary>
+	<description>
+		<p>
+			Betaflight Blackbox Explorer is a crossplatform configuration tool for the Betaflight flight control system.
+			It allows you to view and analyse logs that the Betaflight software has created during a flight.
+			Various types of aircraft are supported by the tool and by Betaflight, e.g. quadcopters, hexacopters, octocopters and fixed-wing aircraft.
+		</p>
+		<p>
+			This Blackbox Viewer is the only log viewer with support for Betaflight specific features. It will likely require that you
+			run the latest firmware on the flight controller. If you are experiencing any problems please make sure you are running
+			the latest firmware version.
+		</p>
+	</description>
+	<content_rating type="oars-1.1" />
+	<url type="homepage">https://github.com/betaflight/blackbox-log-viewer</url>
+	<url type="bugtracker">https://github.com/betaflight/blackbox-log-viewer/issues</url>
+	<url type="donation">https://patreon.com/betaflight/</url>
+	<releases>
+		<release version="3.5.0" date="2021-06-05"/>
+	</releases>
+	<categories>
+		<category>Utility</category>
+	</categories>
+</component>

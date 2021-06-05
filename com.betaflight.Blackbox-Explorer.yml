@@ -1,0 +1,41 @@
+app-id:   'com.betaflight.Blackbox-Explorer'
+runtime:  'org.freedesktop.Platform'
+runtime-version: '20.08'
+sdk: 'org.freedesktop.Sdk'
+command: 'betaflight-blackbox-explorer'
+rename-desktop-file: 'betaflight-blackbox-explorer.desktop'
+rename-icon: 'bf_icon_128'
+separate-locales: false
+modules:
+    - name: 'app'
+      buildsystem: 'simple'
+      build-commands:
+          - 'cp --verbose --archive "betaflight-blackbox-explorer" "${FLATPAK_DEST}/betaflight-blackbox-explorer"'
+      sources:
+          - 'src-app.json'
+    - name: 'exports'
+      buildsystem: 'simple'
+      build-commands:
+          - 'mkdir --parent "${FLATPAK_DEST}/bin"'
+          - 'ln --symbolic "${FLATPAK_DEST}/betaflight-blackbox-explorer/betaflight-blackbox-explorer" "${FLATPAK_DEST}/bin/betaflight-blackbox-explorer"'
+          - 'mkdir --parent
+              "${FLATPAK_DEST}/share/icons/hicolor/128x128/apps"
+              "${FLATPAK_DEST}/share/applications"
+              "${FLATPAK_DEST}/share/metainfo"
+              "${FLATPAK_DEST}/share/mime/packages"'
+          - 'desktop-file-install --dir="${FLATPAK_DEST}/share/applications/" --set-icon="${FLATPAK_ID}" --set-key=Exec --set-value="betaflight-blackbox-explorer %U" "${FLATPAK_DEST}/betaflight-blackbox-explorer/betaflight-blackbox-explorer.desktop"'
+          - 'desktop-file-validate "${FLATPAK_DEST}/share/applications/betaflight-blackbox-explorer.desktop"'
+          - 'install "${FLATPAK_DEST}/betaflight-blackbox-explorer/icon/bf_icon_128.png" "${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/"'
+          - 'appstream-util validate-relax --nonet "${FLATPAK_ID}.appdata.xml"'
+          - 'install "${FLATPAK_ID}.appdata.xml" "${FLATPAK_DEST}/share/metainfo"'
+          - 'install "${FLATPAK_DEST}/betaflight-blackbox-explorer/mime/betaflight-blackbox-explorer.xml" "${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml"'
+      sources:
+          - 'src-appdata.json'
+finish-args:
+    - '--share=ipc'
+    - '--socket=x11'
+    - '--socket=fallback-x11'
+    - '--socket=pulseaudio'
+    - '--share=network'
+    - '--filesystem=home'
+    - '--device=all'
