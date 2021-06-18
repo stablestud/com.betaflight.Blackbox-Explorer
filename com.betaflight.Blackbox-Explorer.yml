@@ -37,5 +37,5 @@ finish-args:
     - '--socket=fallback-x11'
     - '--socket=pulseaudio'
     - '--share=network'
-    - '--filesystem=home'
+    - '--filesystem=host'
     - '--device=all'
