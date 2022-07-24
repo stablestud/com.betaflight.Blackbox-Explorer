@@ -1,8 +1,8 @@
 [ 
 	{
 		"type": "archive",
-		"url": "https://github.com/betaflight/blackbox-log-viewer/releases/download/3.5.0/betaflight-blackbox-explorer_3.5.0_linux64.zip",
-		"sha256": "39361b72e254824e3bf270df9ecb0451480e49e5625eb99962df3b542cf25c5e",
+		"url": "https://github.com/betaflight/blackbox-log-viewer/releases/download/3.6.0/betaflight-blackbox-explorer_3.6.0_linux64-portable.zip",
+		"sha256": "6204c2b1db27c54a70d7e9632d1caad33c69c85948d958dcb9c48ee3d0467456",
 		"dest": "betaflight-blackbox-explorer"
 	}
 ]

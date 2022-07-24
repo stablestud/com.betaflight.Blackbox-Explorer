@@ -1,7 +1,7 @@
 
 
-app_version="3.5.0"
-app_dl_file="betaflight-blackbox-explorer_${app_version}_linux64.zip"
+app_version="3.6.0"
+app_dl_file="betaflight-blackbox-explorer_${app_version}_linux64-portable.zip"
 app_dl_url="https://github.com/betaflight/blackbox-log-viewer/releases/download/${app_version}/${app_dl_file}"
 
 appdata_file="com.betaflight.Blackbox-Explorer.appdata.xml"

@@ -22,7 +22,7 @@
 	<url type="bugtracker">https://github.com/betaflight/blackbox-log-viewer/issues</url>
 	<url type="donation">https://patreon.com/betaflight/</url>
 	<releases>
-		<release version="3.5.0" date="2021-06-19"/>
+		<release version="3.6.0" date="2022-07-24"/>
 	</releases>
 	<categories>
 		<category>Utility</category>
